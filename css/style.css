@@ -4,6 +4,101 @@
 	box-sizing: border-box;
 }
 
+
+
+
+.box {
+	background-color: blue;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.img-grande {
+	height: 300px;
+	width: 600px;
+	background-color: white;
+	background-image: url('/img/01.webp');
+	background-size: cover;
+}
+
+
+.immagine-centrale {
+	display: flex;
+	flex-direction: column;
+	color: white;
+}
+
+
+
+.immagini-piccole {
+	margin-left: 10px;
+	background-color: green;
+	height: 300px;
+	width: 200px;
+	z-index: 0;
+}
+
+.immagini-piccole img {
+	height: 57px;
+	width: 200px;
+	object-fit: cover;
+}
+
+
+.bottoni {
+	display: flex;
+	position: absolute;
+	justify-content: space-between;
+}
+
+
+
+
+.btn-left {
+	position: relative;
+	bottom: -50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	background-color: white;
+}
+
+.btn-right {
+	position: relative;
+	left: 500px;
+	bottom: -50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 100%;
+	background-color: white;
+}
+
+.btn-left:hover, .btn-right:hover {
+	background-color: lightblue;
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
 body {
 	display: flex;
 	height: 100vh;
@@ -60,6 +155,7 @@ body {
 	object-position: center;
 }
 
+
 .active {
 	display: block;
 }
@@ -84,4 +180,5 @@ body {
 	border: 1px solid fuchsia;
 	height: 70px;
 
-}
+} */
+
