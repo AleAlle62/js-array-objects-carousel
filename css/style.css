@@ -1,184 +1,87 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-
-
-.box {
-	background-color: blue;
-	display: flex;
-	height: 100vh;
-	justify-content: center;
-	align-items: center;
-}
-
-.img-grande {
-	height: 300px;
-	width: 600px;
-	background-color: white;
-	background-image: url('/img/01.webp');
-	background-size: cover;
-}
-
-
-.immagine-centrale {
-	display: flex;
-	flex-direction: column;
-	color: white;
-}
-
-
-
-.immagini-piccole {
-	margin-left: 10px;
-	background-color: green;
-	height: 300px;
-	width: 200px;
-	z-index: 0;
-}
-
-.immagini-piccole img {
-	height: 57px;
-	width: 200px;
-	object-fit: cover;
-}
-
-
-.bottoni {
-	display: flex;
-	position: absolute;
-	justify-content: space-between;
-}
-
-
-
-
-.btn-left {
-	position: relative;
-	bottom: -50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: .5rem;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 100%;
-	background-color: white;
-}
-
-.btn-right {
-	position: relative;
-	left: 500px;
-	bottom: -50px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: .5rem;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 100%;
-	background-color: white;
-}
-
-.btn-left:hover, .btn-right:hover {
-	background-color: lightblue;
-	cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-/* 
-body {
-	display: flex;
-	height: 100vh;
-    color: green;
-}
-
-.slider {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	margin: auto;
-	height: 80%;
-	width: 60%;
-	max-width: 600px;
-	max-height: 400px;
-}
-
-.controls {
-	display: flex;
-	justify-content: space-between;
+body{
+    height: 100vh;
+    display: flex;
     flex-direction: column;
-	align-items: center;
-	position: absolute;
-	inset: 0;
-	z-index: 10;
+    justify-content: center;
+    align-items: center;
+	background-image: url('https://cdn.sforum.vn/sforum/wp-content/uploads/2022/09/ps-thumb.jpg');
+	background-position: center;
+	background-color: #FFFFFF44; backdrop-filter: blur(8px);
 }
 
-.btn-left, .btn-right {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: .5rem;
-	width: 3rem;
-	height: 3rem;
-	border-radius: 100%;
-	background-color: white;
-    rotate: 90deg;
-}
 
-.btn-left:hover, .btn-right:hover {
-	background-color: lightblue;
-	cursor: pointer;
-}
-
-.slider-img {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	inset: 0;
-	display: none;
-	width: 100%;
-	height: 100%;
+img {
 	object-fit: cover;
-	object-position: center;
 }
 
 
-.active {
-	display: block;
+.sliders{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    padding: 1rem;
+}
+
+.left-slider{
+	position: relative;
+    height: 100%;
+    width: 80%;
+}
+
+.right-slider{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+	color: white;
+	font-size: 2em;
 }
 
 
-.thumbs {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	right: -180px;
+.left-slider-img{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
 }
 
-.thumb-img {
-	height: 50px;
-	margin: 5px;
-	border: 1px solid fuchsia;
-	opacity: 0.5;
+.right-slider-img{
+	height: 74px;
 }
 
-.thumb-img-active {
-	margin: 5px;
-	border: 1px solid fuchsia;
-	height: 70px;
+.active{
+    visibility: visible;
+}
 
-} */
+.selected{
+    border: 3px solid fuchsia;
+}
+
+
+.info{
+    position: absolute;
+    top: 140px;
+    z-index: 100;
+    color: white;
+    text-align: center;
+}
+
 
