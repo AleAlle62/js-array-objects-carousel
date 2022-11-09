@@ -37,3 +37,59 @@ const eleImmaginiPiccole = document.querySelector('.immagini-piccole')
 
 
 // RIFARE I DUE BOTTONI guardando il mio vecchio, riscrivere tutto
+
+for (let i = 0; i < arrImages; i++) {
+	//dichiarazione nuove variabili 
+	let eleImg = document.createElement('img')
+	eleImg.src = arrImages[i].image
+	eleImg.classList.add('immagine-centrale-img')
+	//ciclo che fa cambiare le immagini
+	if (i === 0){
+		eleImg.classList.add('active')
+	}
+	eleImmagineCentrale.append('eleImg')
+}
+
+//altre variabili 
+let listEleImg = document.querySelectorAll('centrale-img')
+let activeIndex = 0
+
+//bottone di sinistra
+eleBtnLeft.addEventListener('click', function (){
+	//far scomparire
+	listEleImg[activeIndex].classList.remove('active')
+	//ciclo infinito
+	if (activeIndex === arrImages.length - 1){
+		activeIndex = 0
+	} else {
+		activeIndex++
+	}
+
+	listEleImg[activeIndex].classList.add('active')
+	eleBtnRight.classList.remove('hidden')
+
+	if (activeIndex === listEleImg.length + 1){
+		eleBtnLeft.classList.add('hidden')
+	}
+})
+
+
+// bottone destra 
+
+eleBtnRight.addEventListener('click', function (){
+	listEleImg[activeIndex].classList.remove('active')
+
+	//ciclo infinito
+	if (activeIndex === arrImages.length - 1){
+		activeIndex = 0
+	} else {
+		activeIndex++
+	}
+
+	listEleImg[activeIndex].classList.add('active')
+	eleBtnLeft.classList.remove('hidden')
+
+	if (activeIndex === listEleImg.length + 1) {
+		eleBtnRight.classList.add('hidden')
+	}
+})
