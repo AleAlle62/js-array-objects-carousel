@@ -13,11 +13,13 @@ body{
 	background-image: url('https://cdn.sforum.vn/sforum/wp-content/uploads/2022/09/ps-thumb.jpg');
 	background-position: center;
 	background-color: #FFFFFF44; backdrop-filter: blur(8px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 img {
 	object-fit: cover;
+    border-radius: 10px;
 }
 
 
